@@ -1,0 +1,33 @@
+h1 {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+h3 {
+  margin-top: 2.5%;
+}
+
+form {
+  margin-left: 30%;
+  margin-right: 30%;
+  display: flex;
+flex-direction: column;
+}
+
+label {
+  display: block;
+  margin: 12px;
+  height: 2rem;
+  text-align: initial;
+}
+input {
+  width: 100%;
+}
+.button {
+  background-color: #3adb76;
+  color: #0a0a0a;
+  font-size: 1.3em;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}

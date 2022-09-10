@@ -4,13 +4,9 @@ import { InputBase } from "@material-ui/core";
 import debounce from "lodash/debounce";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import { addSearchResults } from "../redux/actions/searchActions";
+import { addSearchResults } from "../../redux/actions/searchActions";
 
-export const SearchBar = ({
-  classes,
-  onAddSearchResults,
-  pageNumber,
-}) => {
+export const SearchBar = ({ classes, onAddSearchResults, pageNumber }) => {
   const debounceHandleSearch = React.useCallback(
     debounce(handleSearch, 500),
     []
@@ -19,7 +15,6 @@ export const SearchBar = ({
   function handleSearch(value) {
     if (value.length) {
       onAddSearchResults({ string: value, pageNumber });
-      
     }
   }
   return (

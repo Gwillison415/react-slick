@@ -6,7 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Rating from "./Rating";
 import moment from "moment";
-import { axiosMovieInstance } from "../utils/api";
+import { axiosMovieInstance } from "../../utils/api";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",

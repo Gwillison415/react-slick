@@ -6,7 +6,7 @@ import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
 import {
   addSearchResults,
   augmentSearchResults,
-} from "../redux/actions/searchActions";
+} from "../../redux/actions/searchActions";
 
 import { alpha, makeStyles } from "@material-ui/core/styles";
 

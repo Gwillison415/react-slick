@@ -10,7 +10,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-
+import { routes } from "../../App";
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -33,7 +33,7 @@ export default function SwipeableTempDrawer({ toggleDrawer, drawerState }) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["About", "Search"].map((text, index) => {
+        {routes.map((text, index) => {
           text = text.toLowerCase();
           return (
             <Link key={text} to={`/${text}`}>
