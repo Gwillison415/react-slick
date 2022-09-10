@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./components/Movies/NavBar";
 import Form from "./components/Form/Form";
-import Message from "./components/Form/Message";
+import FuncForm from "./components/Form/FuncForm";
 import About from "./components/About";
 import "./App.css";
 import SearchResults from "./components/Movies/SearchResults";
@@ -16,8 +16,7 @@ function App() {
           <Switch>
             <Route path="/form">
               {" "}
-              <Form isFormValid></Form>
-              <Message isFormValid></Message>
+              <FuncForm></FuncForm>
             </Route>
             <Route path="/about">
               {" "}

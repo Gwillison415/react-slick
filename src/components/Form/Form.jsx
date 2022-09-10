@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { PropTypes } from "prop-types";
 import "./form.css";
+
+// NOT USED
+
 class Form extends Component {
   constructor(props) {
     super(props);
