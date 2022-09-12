@@ -21,7 +21,11 @@ export default function DropDown(props) {
   const color = dropdownValue === placeholder ? "grey" : "black";
 
   return (
-    <label aria-label={{ placeholder }} className={styles.formLabel} for={id}>
+    <label
+      aria-label={{ placeholder }}
+      className={styles.formLabel}
+      htmlFor={id}
+    >
       <select
         aria-label={placeholder}
         id={id}
@@ -29,12 +33,21 @@ export default function DropDown(props) {
         onChange={handleChange}
         style={{ color }}
       >
-        <option className={styles.hiddenPlaceholder} value={placeholder}>
+        <option
+          key={`placeholder ${id}`}
+          className={styles.hiddenPlaceholder}
+          value={placeholder}
+        >
           {placeholder}
         </option>
-        {choices.map(({ id, message }) => {
+        {choices.map(({ id, message }, idx) => {
           return (
-            <option className={styles.option} id={id} value={id}>
+            <option
+              key={`${id}-${idx}`}
+              className={styles.option}
+              id={id}
+              value={id}
+            >
               {message}
             </option>
           );

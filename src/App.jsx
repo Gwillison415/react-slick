@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./components/Movies/NavBar";
+import NavBar from "./components/Layout/NavBar";
 import Form from "./components/Form/Form";
 import FuncForm from "./components/Form/FuncForm";
 import About from "./components/About";

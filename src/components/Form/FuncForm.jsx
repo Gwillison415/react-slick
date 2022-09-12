@@ -71,43 +71,44 @@ export default function FuncForm({}) {
       <div className="formContainer">
         <h1 className="text-center">Form Validation</h1>
         <form
+          className="validationForm"
           onSubmit={(e) => {
             handleSubmit(e, isValid);
           }}
         >
           {" "}
-          <label>
+          <label className="validationLabel">
             Name:
             <input
-              className={"name"}
+              className="validationInput name"
               type="text"
               value={nameInput}
               onChange={handleNameChange}
             />
           </label>
-          <label>
+          <label className="validationLabel">
             Email:
             <input
-              className={"email"}
+              className="validationInput email"
               type="text"
               value={emailInput}
               onChange={handleEmailChange}
             />
           </label>
-          <label>
+          <label className="validationLabel">
             Phone:
             <input
-              className={"phone"}
+              className="validationInput phone"
               type="text"
               value={phoneInput}
               onChange={handlePhoneChange}
             />
           </label>
-          <label>
+          <label className="validationLabel">
             Blog URL:
             <input
               type="url"
-              className={"url"}
+              className="validationInput url"
               value={urlInput}
               placeholder={"Blog URL:"}
               pattern="https://.*"

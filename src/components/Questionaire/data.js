@@ -8,11 +8,11 @@ export const surveyData = {
       name: "intro",
       type: "intro",
       logo: {
-        medium: "https://cdn.allvoices.co/companies/newco/v2/logo-navy@2x.png",
+        medium: "https://cdn.WhiteOut.co/companies/newco/v2/logo-navy@2x.png",
       },
       data: {
         content:
-          "If you've experienced something challenging at work, we want to make sure you feel heard. You can use AllVoices to share your feedback, questions or concerns. NewCo will be able to communicate with you via AllVoices anonymous messaging portal, but will never know your phone number.",
+          "If you've experienced something challenging at work, we want to make sure you feel heard. You can use WhiteOut to share your feedback, questions or concerns. NewCo will be able to communicate with you via WhiteOut anonymous messaging portal, but will never know your phone number.",
         ctaText: null,
       },
     },
@@ -187,13 +187,13 @@ export const surveyData = {
       questions: [
         {
           id: 1083,
-          role: "whyAllVoices",
+          role: "whyWhiteOut",
           type: "dropdown",
           required: true,
-          message: "What is your reason for using AllVoices?",
+          message: "What is your reason for using WhiteOut?",
           description: null,
           richDescription: null,
-          placeholder: "What is your reason for using AllVoices?",
+          placeholder: "What is your reason for using WhiteOut?",
           choices: [
             {
               id: 3266,

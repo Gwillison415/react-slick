@@ -88,66 +88,69 @@ class Form extends Component {
     return (
       <div className="row">
         <h1 className="text-center">Form Validation</h1>
-        <form
-          onSubmit={(e) => {
-            this.handleSubmit(e, isFormValid);
-          }}
-        >
-          {" "}
-          <label>
-            Name:
-            <input
-              className={"name"}
-              type="text"
-              value={nameInput}
-              onChange={this.handleNameChange}
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              className={"email"}
-              type="text"
-              value={emailInput}
-              onChange={this.handleEmailChange}
-            />
-          </label>
-          <label>
-            Phone:
-            <input
-              className={"phone"}
-              type="text"
-              value={phoneInput}
-              onChange={this.handlePhoneChange}
-            />
-          </label>
-          <label>
-            Blog URL:
-            <input
-              type="url"
-              className={"url"}
-              value={urlInput}
-              placeholder={"Blog URL:"}
-              pattern="https://.*"
-              required
-              onChange={(e) => {
-                this.handleUrlChange(e);
-              }}
-            />
-          </label>
-          <div className="button">
-            <a
-              href="#"
-              onClick={(event) => {
-                this.props.isFormValid(isFormValid);
-                event.preventDefault();
-              }}
-              className="button success expand round text-center"
-            >
-              Verify
-            </a>
-          </div>
-        </form>
+        <div className="formContainer">
+          <form
+            className="validationForm"
+            onSubmit={(e) => {
+              this.handleSubmit(e, isFormValid);
+            }}
+          >
+            {" "}
+            <label className="validationLabel">
+              Name:
+              <input
+                className="validationInput name"
+                type="text"
+                value={nameInput}
+                onChange={this.handleNameChange}
+              />
+            </label>
+            <label className="validationLabel">
+              Email:
+              <input
+                className="validationInput email"
+                type="text"
+                value={emailInput}
+                onChange={this.handleEmailChange}
+              />
+            </label>
+            <label className="validationLabel">
+              Phone:
+              <input
+                className="validationInput phone"
+                type="text"
+                value={phoneInput}
+                onChange={this.handlePhoneChange}
+              />
+            </label>
+            <label className="validationLabel">
+              Blog URL:
+              <input
+                className="validationInput url"
+                type="url"
+                value={urlInput}
+                placeholder={"Blog URL:"}
+                pattern="https://.*"
+                required
+                onChange={(e) => {
+                  this.handleUrlChange(e);
+                }}
+              />
+            </label>
+            <div className="button">
+              <a
+                href="#"
+                onClick={(event) => {
+                  this.props.isFormValid(isFormValid);
+                  event.preventDefault();
+                }}
+                className="button success expand round text-center"
+              >
+                Verify
+              </a>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

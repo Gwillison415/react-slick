@@ -6,8 +6,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import SwipeableDrawer from "./SwipeableDrawer";
-import SearchBar from "./SearchBar";
+import SwipeableDrawer from "../Movies/SwipeableDrawer";
+import SearchBar from "../Movies/SearchBar";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
