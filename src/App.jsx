@@ -1,13 +1,13 @@
 import React from "react";
 import NavBar from "./components/Layout/NavBar";
-import Form from "./components/Form/Form";
+import GraphTraversal from "./components/Graph/GraphTraversal";
 import FuncForm from "./components/Form/FuncForm";
 import About from "./components/About";
 import { Survey } from "./components/Questionaire";
 import "./App.css";
 import SearchResults from "./components/Movies/SearchResults";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-export const routes = ["About", "Search", "Form", "Questionaire"];
+export const routes = ["About", "Search", "Form", "Questionaire", "Graph"];
 function App() {
   return (
     <>
@@ -23,12 +23,15 @@ function App() {
               {" "}
               <Survey></Survey>
             </Route>
+            <Route path="/search">
+              <SearchResults></SearchResults>
+            </Route>
+            <Route path="/graph">
+              <GraphTraversal></GraphTraversal>
+            </Route>
             <Route path="/about">
               {" "}
               <About></About>
-            </Route>
-            <Route path="/search">
-              <SearchResults></SearchResults>
             </Route>
             <Route path="/">
               <SearchResults></SearchResults>
