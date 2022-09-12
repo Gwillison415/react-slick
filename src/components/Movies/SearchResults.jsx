@@ -33,9 +33,11 @@ export function SearchResults({
   };
   return (
     <>
-      {results.map((cardProps, idx) => {
-        return <MediaCard key={idx} {...cardProps}></MediaCard>;
-      })}
+      {results
+        ? results.map((cardProps, idx) => {
+            return <MediaCard key={idx} {...cardProps}></MediaCard>;
+          })
+        : null}
       {page > 0 && (
         <Button
           variant="contained"

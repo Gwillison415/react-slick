@@ -82,7 +82,7 @@ export default function NavBar() {
   };
 
   return (
-    <div id={"foo"} className={classes.root}>
+    <div id={"foo"} data-testid={"foo-navBar"} className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <IconButton

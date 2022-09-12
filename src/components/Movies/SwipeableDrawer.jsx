@@ -36,7 +36,7 @@ export default function SwipeableTempDrawer({ toggleDrawer, drawerState }) {
         {routes.map((text, index) => {
           text = text.toLowerCase();
           return (
-            <Link key={text} to={`/${text}`}>
+            <Link data-testid={text} key={text} to={`/${text}`}>
               <ListItem button>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -56,6 +56,7 @@ export default function SwipeableTempDrawer({ toggleDrawer, drawerState }) {
       {["top"].map((anchor) => (
         <React.Fragment key={anchor}>
           <SwipeableDrawer
+            data-testid={"swipe"}
             disableBackdropTransition={!iOS}
             disableDiscovery={iOS}
             anchor={anchor}

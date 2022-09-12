@@ -1,8 +1,10 @@
+// ENZYME IS DEAD https://dev.to/wojtekmaj/enzyme-is-dead-now-what-ekl
+
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "../App";
-import Form from "../components/Form";
-import Message from "../components/Message";
+import { createRoot } from "react-dom/client";
+import App from "../../App";
+import Form from "./Form";
+import Message from "./Message";
 import expect from "expect";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
@@ -15,7 +17,7 @@ configure({ adapter: new Adapter() });
 describe("Form Validation <App />", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<App />, div);
+    createRoot(<App />, div);
   });
 
   it("check default message", () => {
