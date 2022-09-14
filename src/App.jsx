@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./components/Layout/NavBar";
+import NavBar from "./components/Presentational/NavBar";
 import GraphTraversal from "./components/Graph/GraphTraversal";
 import Navigation from "./components/HackerMaps/Navigation";
 import FuncForm from "./components/Form/FuncForm";
